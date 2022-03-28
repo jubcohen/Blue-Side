@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
   },
 
   title: {
-      color: '#b64040',
+      color: '#fff',
   }
 });
