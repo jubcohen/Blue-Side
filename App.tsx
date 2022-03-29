@@ -1,9 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import CSS from 'csstype';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    'courier-prime': require('./assets/fonts/courier-prime.ttf'),
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Blue Side</Text>
@@ -18,11 +25,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#d5e7ed",
     justifyContent: 'center',
     alignItems: 'center',
-    fontFamily: 'courier-prime',
-    fontSize: 2,
   },
-
+  
   title: {
-      color: '#fff',
+    color: '#fff',
+    fontFamily: 'courier-prime',
+    fontSize: 100,
   }
 });
