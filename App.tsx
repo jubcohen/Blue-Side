@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   
   title: {
-    color: '#fff',
+    color: '#ffffffb6',
     fontFamily: 'courier-prime',
     fontSize: 100,
   },
@@ -48,9 +48,8 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    marginVertical: 100,
+    marginVertical: 50,
     borderBottomColor: '#000000',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-
 });
