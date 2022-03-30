@@ -23,15 +23,15 @@ export default function App(): JSX.Element {
   
 const styles = StyleSheet.create({
   container: {
-  flex: 1,
-      backgroundColor: "#d5e7ed",
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
+    flex: 1,
+    backgroundColor: "#d5e7ed",
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
     
-    title: {
-      color: '#ffffffb6',
-      fontFamily: 'courier-prime',
-      fontSize: 100,
-    },
- },
+  title: {
+    color: '#ffffffb6',
+    fontFamily: 'courier-prime',
+    fontSize: 100,
+  },
+})
