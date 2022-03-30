@@ -4,23 +4,21 @@ import { StyleSheet, Text, View, Button, SafeAreaView, Alert } from 'react-nativ
 import { useFonts } from 'expo-font'; 
 import AppLoading from 'expo-app-loading';
 
-const Separator = () => (
-  <View style={styles.separator} />
-);
-
-{
-return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
-    </View>
-  );
-} 
 
 export default function App(): JSX.Element {
   let [fontsLoaded] = useFonts({
     'courier-prime': require('./assets/fonts/courier-prime.ttf'),
   });
-  
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -34,4 +32,4 @@ const styles = StyleSheet.create({
     fontFamily: 'courier-prime',
     fontSize: 100,
   },
-})
+});
