@@ -17,6 +17,7 @@ export default function App(): JSX.Element {
   }
   return (
     <View style={styles.container}>
+      
       <Text style={styles.title}>Blue Side</Text>
       <Separator />
       <Button 
