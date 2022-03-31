@@ -22,14 +22,14 @@ export default function App(): JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#d5e7ed",
+    backgroundColor: "#FAF5F1",
     justifyContent: 'center',
     alignItems: 'center',
   },
     
   title: {
     color: '#ffffffb6',
-    fontFamily: 'courier-prime',
-    fontSize: 100,
+    fontFamily: 'courier-prime-Regular',
+    fontSize: 70,
   },
 });
