@@ -3,7 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, SafeAreaView, Alert } from 'react-native';
 import { useFonts } from 'expo-font'; 
 import AppLoading from 'expo-app-loading';
+
 import routes from '../../routes';
+import { ContainerPage, TitlePage } from "../../components/Main";
 
 const Separator = () => (
   <View style={styles.separator} />
