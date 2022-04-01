@@ -15,7 +15,7 @@ export default function App(): JSX.Element {
   return (
     <View style={styles.container}>
       <image>
-        source={require('./assets/fonts/imagens/iconerespiracao.png')}
+        source={require('./assets/imagens/iconerespiracao.png')}
         style={styles.logo}
       </image>
       <Text style={styles.title}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
