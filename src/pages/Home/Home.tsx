@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
                 source={require('../../../assets/imagens/logo.png')} />
             <Text style={styles.title}>Blue Side</Text>
             <TouchableOpacity
-                style={{ marginTop: 12, padding: 8, backgroundColor: "#BDBDBD" }}
+                style={{ marginTop: 12, padding: 9, backgroundColor: "#438788",}}
                 onPress={() => navigation.navigate("Respiracao")}>
                 <Text>Click here to start</Text>
             </TouchableOpacity>
