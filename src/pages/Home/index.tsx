@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
               source={require('../../../assets/imagens/logo.png')} />
           <Text style={styles.title}>Blue Side</Text>
           <TouchableOpacity
-              style={styles.botao}
+              style={styles.botaoinicio}
               onPress={() => navigation.navigate("Menu")}>
               <Text style={styles.textobotao}>Click here to start</Text>
           </TouchableOpacity>
@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
   },
   
   title: {
-    color: '#ffffff9c',
+    color: '#ffffff',
     fontFamily: 'courier-prime',
     alignContent: "center",
     fontSize: 100,
@@ -61,15 +61,15 @@ export const styles = StyleSheet.create({
   },
 
   textobotao: {
-    color: '#ffffff9c',
+    color: '#ffffff',
     fontFamily: 'courier-prime',
-    alignContent: "center",
+    alignContent: 'center',
     textAlign: 'center',
     textAlignVertical: 'center',
     fontSize: 20,
   },
 
-  botao: { 
+  botaoinicio: { 
     marginTop: 12, 
     padding: 9, 
     backgroundColor: "#438788", 
@@ -78,6 +78,12 @@ export const styles = StyleSheet.create({
     borderColor:'#438788', 
     width:280, 
     height:40,
+  },
+
+  iconerespiracao:{
+    width:200,
+    resizeMode:'contain',
+    alignContent: 'center',
   },
 
   espaco: {
@@ -96,5 +102,40 @@ export const styles = StyleSheet.create({
     marginVertical: 50,
     borderBottomColor: '#000000',
     borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+
+  titlerespiracao: {
+    color: '#0000009c',
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    fontSize: 30,
+  },
+
+  botao: { 
+    marginTop: 12, 
+    padding: 9, 
+    backgroundColor: "#438788",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#438788',
+  },
+
+  botaoback: { 
+    marginTop: 12, 
+    padding: 7, 
+    backgroundColor: "#438788",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#438788', 
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+
+  titlemenu: {
+    color: '#438788',
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    textAlign: 'center',
+    fontSize: 60,
   },
 });

@@ -8,6 +8,7 @@ import { useFonts } from 'expo-font';
 import Home from "../../pages/Home";
 import Respiracao from "../../pages/Respiracao";
 import Menu from "../../pages/Menu";
+import Blog from "../../pages/Blog";
 
 const { Navigator, Screen } = createNativeStackNavigator<propsNavigationStack>()
 
@@ -42,6 +43,17 @@ export default function Stacks() {
                 component={Respiracao} 
                 options={{
                     title: 'Respiração',
+                    headerStyle: {
+                      backgroundColor: '#fff',
+                    },
+                    headerTintColor: '#a81818',
+                    headerTitleStyle: { fontFamily:'courier-prime'},
+                  }}  />
+            <Screen 
+                name="Blog" 
+                component={Blog} 
+                options={{
+                    title: 'Blog',
                     headerStyle: {
                       backgroundColor: '#fff',
                     },
