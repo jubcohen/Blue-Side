@@ -9,7 +9,7 @@ import { propsStack } from "../../routes/Stack/Models";
 
 export default function Menu(): JSX.Element {
     const navigation = useNavigation<propsStack>();
-    
+
     const [fontsLoaded] = useFonts({
         'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
     });

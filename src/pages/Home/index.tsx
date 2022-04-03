@@ -26,10 +26,9 @@ export default function Home(): JSX.Element {
               source={require('../../../assets/imagens/logo.png')} />
           <Text style={styles.title}>Blue Side</Text>
           <TouchableOpacity
-              style={{ marginTop: 12, padding: 9, backgroundColor: "#438788", borderWidth:0.5,
-              borderRadius: 10, borderColor:'#438788', width:280, height:40,}}
+              style={styles.botao}
               onPress={() => navigation.navigate("Menu")}>
-              <Text style={styles.botao}>Click here to start</Text>
+              <Text style={styles.textobotao}>Click here to start</Text>
           </TouchableOpacity>
           <StatusBar style="auto" />
           <Text style={styles.espaco}></Text>
@@ -61,13 +60,24 @@ export const styles = StyleSheet.create({
     fontSize: 20,
   },
 
-  botao: {
+  textobotao: {
     color: '#ffffff9c',
     fontFamily: 'courier-prime',
     alignContent: "center",
     textAlign: 'center',
     textAlignVertical: 'center',
     fontSize: 20,
+  },
+
+  botao: { 
+    marginTop: 12, 
+    padding: 9, 
+    backgroundColor: "#438788", 
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#438788', 
+    width:280, 
+    height:40,
   },
 
   espaco: {
