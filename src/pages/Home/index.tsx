@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, SafeAreaView, Alert } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -7,20 +7,16 @@ import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
-const Separator = () => (
-  <View style={styles.separator} />
-);
 
 export default function Home(): JSX.Element {
+  const navigation = useNavigation<propsStack>();
 
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
       'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
   });
   if (!fontsLoaded) {
       return <AppLoading />;
   }
-  
-  const navigation = useNavigation<propsStack>();
 
   return (
       <View style={styles.container}>
@@ -30,9 +26,10 @@ export default function Home(): JSX.Element {
               source={require('../../../assets/imagens/logo.png')} />
           <Text style={styles.title}>Blue Side</Text>
           <TouchableOpacity
-              style={{ marginTop: 12, padding: 9, backgroundColor: "#438788",}}
+              style={{ marginTop: 12, padding: 9, backgroundColor: "#438788", borderWidth:0.5,
+              borderRadius: 10, borderColor:'#438788', width:280, height:40,}}
               onPress={() => navigation.navigate("Menu")}>
-              <Text>Click here to start</Text>
+              <Text style={styles.botao}>Click here to start</Text>
           </TouchableOpacity>
           <StatusBar style="auto" />
           <Text style={styles.espaco}></Text>
@@ -58,9 +55,18 @@ export const styles = StyleSheet.create({
   },
 
   subtitle: {
+    color: '#0000007c',
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    fontSize: 20,
+  },
+
+  botao: {
     color: '#ffffff9c',
     fontFamily: 'courier-prime',
     alignContent: "center",
+    textAlign: 'center',
+    textAlignVertical: 'center',
     fontSize: 20,
   },
 
