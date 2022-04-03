@@ -8,7 +8,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
 export default function Respiracao(): JSX.Element {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
   });
   if (!fontsLoaded) {
@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
   logo:{
     width:200,
     resizeMode:'contain',
+    alignContent: 'center',
   },
   
   container:{

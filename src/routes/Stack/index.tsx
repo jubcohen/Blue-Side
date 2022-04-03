@@ -12,14 +12,14 @@ import Menu from "../../pages/Menu";
 const { Navigator, Screen } = createNativeStackNavigator<propsNavigationStack>()
 
 export default function() {
-    let [fontsLoaded] = useFonts({
+    const [fontsLoaded] = useFonts({
         'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
     });
     if (!fontsLoaded) {
         return <AppLoading />;
     }
     return(
-        <Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+        <Navigator initialRouteName="Respiracao" screenOptions={{headerShown: false}}>
             <Screen 
                 name="Home" 
                 component={Home} />
