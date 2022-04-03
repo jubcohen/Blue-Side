@@ -25,7 +25,7 @@ export default function Home(): JSX.Element {
             <Text style={styles.title}>Blue Side</Text>
             <TouchableOpacity
                 style={{ marginTop: 12, padding: 9, backgroundColor: "#438788",}}
-                onPress={() => navigation.navigate("Respiracao")}>
+                onPress={() => navigation.navigate("Menu")}>
                 <Text>Click here to start</Text>
             </TouchableOpacity>
             <StatusBar style="auto" />
