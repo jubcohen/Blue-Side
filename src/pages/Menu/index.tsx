@@ -1,6 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image } from 'react-native';
-import { StyleSheet, Button, SafeAreaView, Alert } from 'react-native';
+import { StyleSheet } from 'react-native';
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -8,14 +6,17 @@ import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
+
 export default function Menu(): JSX.Element {
+    const navigation = useNavigation<propsStack>();
+    
     const [fontsLoaded] = useFonts({
         'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
     });
     if (!fontsLoaded) {
         return <AppLoading />;
     }
-    const navigation = useNavigation<propsStack>();
+    
     return (
         <View> style={styles.container}
             <Text style={styles.title}>Welcome to Blue Side</Text>

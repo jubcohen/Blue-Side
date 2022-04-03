@@ -11,15 +11,17 @@ import Menu from "../../pages/Menu";
 
 const { Navigator, Screen } = createNativeStackNavigator<propsNavigationStack>()
 
-export default function() {
+export default function Stacks() {
     const [fontsLoaded] = useFonts({
         'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
     });
     if (!fontsLoaded) {
         return <AppLoading />;
     }
+
+
     return(
-        <Navigator initialRouteName="Respiracao" screenOptions={{headerShown: false}}>
+        <Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
             <Screen 
                 name="Home" 
                 component={Home} />
