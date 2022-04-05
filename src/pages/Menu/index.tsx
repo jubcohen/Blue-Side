@@ -26,7 +26,7 @@ export default function Menu(): JSX.Element {
             </TouchableOpacity>
             <Text style={styles.titlemenu}>Welcome to Blue Side</Text>
             <TouchableOpacity
-                style={styles.botao}
+                style={styles.botaorespiracao}
                 onPress={() => navigation.navigate("Respiracao")}>
                 <Text style={styles.textobotao}>Breathing Practice</Text>
             </TouchableOpacity>
