@@ -60,6 +60,7 @@ export default function Stacks() {
                     headerTintColor: '#a81818',
                     headerTitleStyle: { fontFamily:'courier-prime'},
                   }}  />
+                  
         </Navigator>
     )
 }

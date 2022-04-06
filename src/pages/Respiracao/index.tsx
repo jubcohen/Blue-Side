@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
 import { styles } from '../Home';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function Respiracao(): JSX.Element {
   const navigation = useNavigation<propsStack>();
@@ -28,8 +29,9 @@ export default function Respiracao(): JSX.Element {
         <Image
             source={require('../../../assets/imagens/iconerespiracao.png')}
             style={styles.iconerespiracao} />
-        <Text style={styles.titlerespiracao}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
-    </View>
+           <Text style={styles.titlerespiracao}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
+     </View>
+     
   );
 }
 

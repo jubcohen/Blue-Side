@@ -43,11 +43,11 @@ export const styles = StyleSheet.create({
   },
 
   iconerespiracao:{
-    width:200,
+    width: 148,
     resizeMode:'contain',
     alignContent: 'center',
   },
-
+  
   espaco: {
     color: '#ffffff9c',
     fontFamily: 'courier-prime',
@@ -67,10 +67,10 @@ export const styles = StyleSheet.create({
   },
 
   titlerespiracao: {
-    color: '#0000009c',
+    color: '#97BEBD',
     fontFamily: 'courier-prime',
     alignContent: "center",
-    fontSize: 30,
+    fontSize: 15,
   },
 
   botao: { 
