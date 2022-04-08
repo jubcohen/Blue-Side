@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { propsStack } from "../../routes/Stack/Models";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { propsNavigationStack } from "./Models";
 import AppLoading from 'expo-app-loading';
@@ -9,6 +11,11 @@ import Home from "../../pages/Home";
 import Respiracao from "../../pages/Respiracao";
 import Menu from "../../pages/Menu";
 import Blog from "../../pages/Blog";
+import Musicas from "../../pages/Musicas";
+import Creditos from "../../pages/Creditos";
+import Doacoes from "../../pages/Doacoes";
+import Login from "../../pages/Login";
+import { Button } from "react-native";
 
 const { Navigator, Screen } = createNativeStackNavigator<propsNavigationStack>()
 
@@ -31,11 +38,13 @@ export default function Stacks() {
                 component={Menu}
                 options={{
                     title: 'Menu',
+                    headerShown: true,
                     headerStyle: {
                       backgroundColor: '#fff',
                     },
                     headerTintColor: '#a81818',
                     headerTitleStyle: { fontFamily:'courier-prime'},
+                  
                   }}
             />
             <Screen 
@@ -43,6 +52,7 @@ export default function Stacks() {
                 component={Respiracao} 
                 options={{
                     title: 'Respiração',
+                    headerShown: false,
                     headerStyle: {
                       backgroundColor: '#fff',
                     },
@@ -54,6 +64,60 @@ export default function Stacks() {
                 component={Blog} 
                 options={{
                     title: 'Blog',
+                    headerShown: false,
+                    headerStyle: {
+                      backgroundColor: '#fff',
+                    },
+                    headerTintColor: '#a81818',
+                    headerTitleStyle: { fontFamily:'courier-prime'},
+                  }}  />
+            
+            <Screen 
+                name="Musicas" 
+                component={Musicas} 
+                options={{
+                    title: 'Songs',
+                    headerShown: false,
+                    headerStyle: {
+                      backgroundColor: '#fff',
+                    },
+                    headerTintColor: '#a81818',
+                    headerTitleStyle: { fontFamily:'courier-prime'},
+                  }}  />
+            
+            <Screen 
+                name="Creditos" 
+                component={Creditos} 
+                options={{
+                    title: 'Songs',
+                    headerShown: false,
+                    headerStyle: {
+                      backgroundColor: '#fff',
+                      
+                    },
+                    headerTintColor: '#a81818',
+                    headerTitleStyle: { fontFamily:'courier-prime'},
+                  }}  />
+            
+            <Screen 
+                name="Doacoes" 
+                component={Doacoes} 
+                options={{
+                    title: 'Songs',
+                    headerShown: false,
+                    headerStyle: {
+                      backgroundColor: '#fff',
+                    },
+                    headerTintColor: '#a81818',
+                    headerTitleStyle: { fontFamily:'courier-prime'},
+                  }}  />
+            
+            <Screen 
+                name="Login" 
+                component={Login} 
+                options={{
+                    title: 'Login',
+                    headerShown: false,
                     headerStyle: {
                       backgroundColor: '#fff',
                     },

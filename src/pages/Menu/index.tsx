@@ -1,17 +1,18 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, Image, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
-import {styles} from '../Home'
+import {styles} from '../../Styles'
 
 export default function Menu(): JSX.Element {
     const navigation = useNavigation<propsStack>();
 
     const [fontsLoaded] = useFonts({
         'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
+        'courier-prime-bold': require('../../../assets/fonts/courier-prime-bold.ttf'),
     });
     if (!fontsLoaded) {
         return <AppLoading />;
@@ -19,22 +20,54 @@ export default function Menu(): JSX.Element {
     
     return (
         <View style={styles.container}>
-            <TouchableOpacity
-                style={styles.botaoback}
-                onPress={() => navigation.goBack()}>
-                <Text style={styles.textobotao}>Back</Text>
-            </TouchableOpacity>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}> 
+                <TouchableOpacity
+                    style={styles.botaoBack}
+                    onPress={() => navigation.goBack()}>
+                    <Text style={styles.textobotaoback}>Back</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.botaoLogin}
+                    onPress={() => navigation.navigate("Login")}>
+                    <Text style={styles.textobotaoback}>Login</Text>
+                </TouchableOpacity>
+            </View>
+
             <Text style={styles.titlemenu}>Welcome to Blue Side</Text>
+
             <TouchableOpacity
-                style={styles.botaorespiracao}
+                style={styles.botaoRespiracao}
                 onPress={() => navigation.navigate("Respiracao")}>
-                <Text style={styles.textobotao}>Breathing Practice</Text>
+                <Image source={require('../../../assets/imagens/iconerespiracao.png')}
+                    style={styles.iconerespiracao1} />
+                <Text style={styles.textobotaorespiracao}>Breathing Practice</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.botao}
-                onPress={() => navigation.navigate("Blog")}>
-                <Text style={styles.textobotao}>Blog</Text>
-            </TouchableOpacity>
+
+            <View style={{ margin: 1, width: '5%', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <TouchableOpacity
+                    style={styles.botaoBlog}
+                    onPress={() => navigation.navigate("Blog")}>
+                    
+                    <Text style={styles.textobotaoBlog}>Blog</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.botaoMusica}
+                    onPress={() => navigation.navigate("Musicas")}>
+                    <Text style={styles.textobotaoMusica}>Songs</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{ margin: 1, width: '5%', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <TouchableOpacity
+                    style={styles.botaoDoacoes}
+                    onPress={() => navigation.navigate("Doacoes")}>
+                    <Text style={styles.textobotaoDoacoes}>Donations</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.botaoCreditos}
+                    onPress={() => navigation.navigate("Creditos")}>
+                    <Text style={styles.textobotaoCreditos}>Credits</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }

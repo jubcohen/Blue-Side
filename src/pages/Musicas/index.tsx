@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
@@ -25,12 +24,7 @@ export default function Respiracao(): JSX.Element {
               onPress={() => navigation.goBack()}>
           <Text style={styles.textobotao}>Back</Text>
         </TouchableOpacity>
-        <Image
-            source={require('../../../assets/imagens/iconerespiracao.png')}
-            style={styles.iconerespiracao2} />
-           <Text style={styles.titlerespiracao}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
-     </View>
-     
+        <Text style={styles.titlerespiracao}>Songs</Text>
+    </View>
   );
 }
-
