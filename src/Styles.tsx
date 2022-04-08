@@ -113,4 +113,15 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 60,
   },
+
+  videorespiracao: {
+    alignContent: 'center',
+    width: 99,
+    height: 87,
+    left: 163,
+    top: 320,
+  }
+
+
 });
+
