@@ -1,11 +1,9 @@
-
 import React from 'react';
-import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
-import {videos} from '../Respiracao/videos'; //segundo a internet eu deveria colocar outro comando, mas estava dando erro
 
 import { styles } from '../../Styles';
 
@@ -26,18 +24,7 @@ export default function Respiracao(): JSX.Element {
               onPress={() => navigation.goBack()}>
           <Text style={styles.textobotao}>Back</Text>
         </TouchableOpacity>
-        <Image
-            source={require('../../../assets/imagens/iconerespiracao.png')}
-            style={styles.iconerespiracao2} />
-           <Text style={styles.titlerespiracao}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
-    
-           <video id="videorespiracao" className="videorespiracao" loop autoPlay muted >
-           <source src='C:\Users\anavi\blue\src\pages\Respiracao\videos\2.mp4' type='video/mp4'></source>
-           </video>
-    
-    
-     </View>
-     
+        <Text style={styles.titlerespiracao}>Credits</Text>
+    </View>
   );
 }
-

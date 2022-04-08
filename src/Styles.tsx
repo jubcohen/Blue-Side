@@ -4,10 +4,10 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#bee1edd4",
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
-  
+
   title: {
     color: '#ffffff',
     fontFamily: 'courier-prime',
@@ -28,9 +28,57 @@ export const styles = StyleSheet.create({
     alignContent: 'center',
     textAlign: 'center',
     textAlignVertical: 'center',
-    fontSize: 20,
+    fontSize: 25,
   },
 
+  textobotaoCreditos: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 25,
+  },
+
+  
+  textobotaoMusica: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 25,
+  },
+  
+  textobotaoDoacoes: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 21,
+    marginTop: 5, 
+  },
+  
+  textobotaoback: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 20,
+  },
+  
+  textobotaorespiracao: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime-bold',
+    textAlign: 'right',
+    textAlignVertical: 'center',
+    marginRight: 30,
+    marginTop: 15,
+    fontSize: 23,
+  },
+  
   botaoinicio: { 
     marginTop: 12, 
     padding: 9, 
@@ -41,13 +89,64 @@ export const styles = StyleSheet.create({
     width:280, 
     height:40,
   },
+  
+  iconeRespiracao:{
+    width: 300,
+    alignItems: 'flex-start',
+    resizeMode:'contain',
+    alignContent: 'center',
+    margin: 8,
+    marginTop: -185,
+    marginLeft: -115,
+  },
+  
+  iconeBlog:{
+    width: 80,
+    alignItems: 'flex-start',
+    resizeMode:'contain',
+    alignContent: 'center',
+    margin: 8,
+    marginTop: -230,
+    marginLeft: -30,
+  },
+  
+  textobotaoBlog: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    marginRight: 15,
+    marginTop: 50,
+    fontSize: 25,
+  },
 
-  iconerespiracao:{
+  iconeMusica:{
+    width: 100,
+    alignItems: 'flex-start',
+    resizeMode:'contain',
+    alignContent: 'center',
+    margin: 8,
+    marginTop: -40,
+    marginLeft: -30,
+  },
+
+  iconeCreditos:{
+    width: 100,
+    alignItems: 'flex-start',
+    resizeMode:'contain',
+    alignContent: 'center',
+    margin: 8,
+    marginTop: -40,
+    marginLeft: -30,
+  },
+
+  iconerespiracao2:{
     width: 148,
     resizeMode:'contain',
     alignContent: 'center',
   },
-  
+
   espaco: {
     color: '#ffffff9c',
     fontFamily: 'courier-prime',
@@ -73,37 +172,110 @@ export const styles = StyleSheet.create({
     fontSize: 15,
   },
 
-  botao: { 
-    marginTop: 12, 
-    padding: 10, 
-    backgroundColor: "#438788",  
-    borderWidth:0.5,
-    borderRadius: 10, 
-    borderColor:'#438788',
-  },
-
-  botaorespiracao: { 
+  botaoRespiracao: { 
+    flex: -1,
+    margin: 8,
+    height: 100,
+    width: 400,
+    resizeMode: "contain",
     marginTop: 12, 
     padding: 20, 
-    flex: -3,
     flexDirection: "row",
     justifyContent: "space-around",
-    alignSelf: "stretch",
-    backgroundColor: "#438788",  
+    textAlignVertical: 'center',
+    backgroundColor: "#438788ca",  
     borderWidth:0.5,
     borderRadius: 10, 
-    borderColor:'#438788',
+    borderColor:'#438788ca',
   },
 
-  botaoback: { 
+  botaoBlog: { 
+    flex: -1,
+    height: 100,
+    width: 190,
+    resizeMode: "contain",
+    margin: 2,
+    marginLeft: -190,
+    textAlignVertical: 'center',
+    backgroundColor: "#fcb147b1",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#f09e7f',
+    padding: 30, 
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+
+  botaoMusica: { 
+    flex: -1,
+    height: 100,
+    width: 190,
+    resizeMode: "contain",
+    margin: 2,
+    marginRight: -190,
+    textAlignVertical: 'center',
+    backgroundColor: "#f09e7f",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#fcb147b1',
+    padding: 30, 
+    flexDirection: 'row',
+    justifyContent: "space-around",
+  },
+
+  botaoDoacoes: { 
+    flex: -1,
+    height: 100,
+    width: 190,
+    resizeMode: "contain",
+    margin: 2,
+    marginLeft: -190,
+    textAlignVertical: 'center',
+    backgroundColor: "#74a3a4e0",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#1358587f',
+    padding: 30, 
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+
+  botaoCreditos: { 
+    flex: -1,
+    height: 100,
+    width: 190,
+    resizeMode: "contain",
+    margin: 2,
+    marginRight: -190,
+    textAlignVertical: 'center',
+    backgroundColor: "#cc44cc3a",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#cc44cc3a',
+    padding: 30, 
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+
+  botaoBack: { 
     marginTop: 12, 
+    marginLeft: -200,
     padding: 7, 
     backgroundColor: "#438788",  
     borderWidth:0.5,
     borderRadius: 10, 
     borderColor:'#438788', 
-    alignItems: 'center',
-    alignContent: 'center',
+    alignItems: 'flex-start',
+  },
+
+  botaoLogin: { 
+    marginTop: 12, 
+    marginRight: -200,
+    padding: 7, 
+    backgroundColor: "#438788",  
+    borderWidth:0.5,
+    borderRadius: 10, 
+    borderColor:'#438788', 
   },
 
   titlemenu: {
