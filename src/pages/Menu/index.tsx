@@ -59,17 +59,12 @@ export default function Menu(): JSX.Element {
                     <Text style={styles.textobotaoMusica}>Songs</Text>
                 </TouchableOpacity>
             </View>
-            <View style={{ margin: 1, width: '5%', flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableOpacity
-                    style={styles.botaoDoacoes}
-                    onPress={() => navigation.navigate("Doacoes")}>
-                    <Text style={styles.textobotaoDoacoes}>Donations</Text>
-                </TouchableOpacity>
+            
+            <View style={{ flexDirection: 'row', justifyContent: 'center'}}>
                 <TouchableOpacity
                     style={styles.botaoCreditos}
                     onPress={() => navigation.navigate("Creditos")}>
-                    <Image source={require('../../../assets/imagens/iconeCreditos.png')}
-                    style={styles.iconeCreditos} />
+                    <Image source={require('../../../assets/imagens/iconeCreditos.png')}                    style={styles.iconeCreditos} />
                     <Text style={styles.textobotaoCreditos}>Credits</Text>
                 </TouchableOpacity>
             </View>

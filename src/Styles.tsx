@@ -31,24 +31,8 @@ export const styles = StyleSheet.create({
     fontSize: 25,
   },
 
-  textobotaoCreditos: {
-    color: '#ffffff',
-    fontFamily: 'courier-prime',
-    alignContent: 'center',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    fontSize: 25,
-  },
-
   
-  textobotaoMusica: {
-    color: '#ffffff',
-    fontFamily: 'courier-prime',
-    alignContent: 'center',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    fontSize: 25,
-  },
+  
   
   textobotaoDoacoes: {
     color: '#ffffff',
@@ -114,29 +98,46 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'courier-prime',
     alignContent: 'center',
-    marginRight: 20,
-    marginTop: 50,
+    fontSize: 25,
+    marginTop: 7,
+  },
+  
+  iconeMusica:{
+    width: 80,
+    alignItems: 'flex-start',
+    resizeMode:'contain',
+    alignContent: 'center',
+    margin: 8,
+    marginTop: -70,
+    marginLeft: -20,
+  },
+  
+  textobotaoMusica: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    marginTop: 8,
+    marginRight: -10,
     fontSize: 25,
   },
 
-  iconeMusica:{
-    width: 100,
-    alignItems: 'flex-start',
-    resizeMode:'contain',
-    alignContent: 'center',
-    margin: 8,
-    marginTop: -40,
-    marginLeft: -30,
-  },
-
   iconeCreditos:{
-    width: 100,
+    width: 50,
     alignItems: 'flex-start',
     resizeMode:'contain',
     alignContent: 'center',
     margin: 8,
-    marginTop: -40,
-    marginLeft: -30,
+    marginTop: -244,
+    marginLeft: -20,
+  },
+  
+  textobotaoCreditos: {
+    color: '#fff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    fontSize: 22,
+    marginTop: -10,
+    marginRight: -15,
   },
 
   iconerespiracao2:{
@@ -240,12 +241,9 @@ export const styles = StyleSheet.create({
 
   botaoCreditos: { 
     flex: -1,
-    height: 100,
+    height: 70,
     width: 190,
-    resizeMode: "contain",
-    margin: 2,
-    marginRight: -190,
-    textAlignVertical: 'center',
+    resizeMode: 'contain',
     backgroundColor: "#cc44cc3a",  
     borderWidth:0.5,
     borderRadius: 10, 
@@ -268,7 +266,7 @@ export const styles = StyleSheet.create({
 
   botaoLogin: { 
     marginTop: 12, 
-    marginRight: -200,
+    marginRight: 10,
     padding: 7, 
     backgroundColor: "#438788",  
     borderWidth:0.5,
