@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
+import {videos} from '../Respiracao/videos'; //segundo a internet eu deveria colocar outro comando, mas estava dando erro
 
 import { styles } from '../Home';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -30,6 +31,12 @@ export default function Respiracao(): JSX.Element {
             source={require('../../../assets/imagens/iconerespiracao.png')}
             style={styles.iconerespiracao} />
            <Text style={styles.titlerespiracao}>Breathe slowly, calmly, inhaling through your nose and exhaling long and softly through your mouth</Text>
+    
+           <video id="videorespiracao" className="videorespiracao" loop autoPlay muted >
+           <source src='C:\Users\anavi\blue\src\pages\Respiracao\videos\2.mp4' type='video/mp4'></source>
+           </video>
+    
+    
      </View>
      
   );
