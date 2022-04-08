@@ -111,12 +111,10 @@ export const styles = StyleSheet.create({
   },
   
   textobotaoBlog: {
-    color: '#ffffff',
+    color: '#fff',
     fontFamily: 'courier-prime',
     alignContent: 'center',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    marginRight: 15,
+    marginRight: 20,
     marginTop: 50,
     fontSize: 25,
   },
