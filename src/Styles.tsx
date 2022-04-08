@@ -40,15 +40,7 @@ export const styles = StyleSheet.create({
     fontSize: 25,
   },
 
-  textobotaoBlog: {
-    color: '#ffffff',
-    fontFamily: 'courier-prime',
-    alignContent: 'center',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    fontSize: 25,
-  },
-
+  
   textobotaoMusica: {
     color: '#ffffff',
     fontFamily: 'courier-prime',
@@ -57,7 +49,7 @@ export const styles = StyleSheet.create({
     textAlignVertical: 'center',
     fontSize: 25,
   },
-
+  
   textobotaoDoacoes: {
     color: '#ffffff',
     fontFamily: 'courier-prime',
@@ -67,7 +59,7 @@ export const styles = StyleSheet.create({
     fontSize: 21,
     marginTop: 5, 
   },
-
+  
   textobotaoback: {
     color: '#ffffff',
     fontFamily: 'courier-prime',
@@ -76,17 +68,17 @@ export const styles = StyleSheet.create({
     textAlignVertical: 'center',
     fontSize: 20,
   },
-
+  
   textobotaorespiracao: {
     color: '#ffffff',
     fontFamily: 'courier-prime-bold',
     textAlign: 'right',
     textAlignVertical: 'center',
-    marginRight: -2,
+    marginRight: 30,
     marginTop: 15,
     fontSize: 23,
   },
-
+  
   botaoinicio: { 
     marginTop: 12, 
     padding: 9, 
@@ -97,25 +89,36 @@ export const styles = StyleSheet.create({
     width:280, 
     height:40,
   },
-
-  iconerespiracao1:{
-    width: 100,
+  
+  iconeRespiracao:{
+    width: 300,
     alignItems: 'flex-start',
     resizeMode:'contain',
     alignContent: 'center',
     margin: 8,
-    marginTop: -40,
-    marginLeft: -30,
+    marginTop: -185,
+    marginLeft: -115,
   },
   
   iconeBlog:{
-    width: 200,
+    width: 80,
     alignItems: 'flex-start',
     resizeMode:'contain',
     alignContent: 'center',
     margin: 8,
-    marginTop: -40,
-    marginLeft: -90,
+    marginTop: -230,
+    marginLeft: -30,
+  },
+  
+  textobotaoBlog: {
+    color: '#ffffff',
+    fontFamily: 'courier-prime',
+    alignContent: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    marginRight: 15,
+    marginTop: 50,
+    fontSize: 25,
   },
 
   iconeMusica:{
@@ -194,7 +197,7 @@ export const styles = StyleSheet.create({
     margin: 2,
     marginLeft: -190,
     textAlignVertical: 'center',
-    backgroundColor: "#f09e7f",  
+    backgroundColor: "#fcb147b1",  
     borderWidth:0.5,
     borderRadius: 10, 
     borderColor:'#f09e7f',
@@ -211,7 +214,7 @@ export const styles = StyleSheet.create({
     margin: 2,
     marginRight: -190,
     textAlignVertical: 'center',
-    backgroundColor: "#fcb147b1",  
+    backgroundColor: "#f09e7f",  
     borderWidth:0.5,
     borderRadius: 10, 
     borderColor:'#fcb147b1',

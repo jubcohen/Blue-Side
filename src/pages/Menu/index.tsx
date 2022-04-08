@@ -38,8 +38,8 @@ export default function Menu(): JSX.Element {
             <TouchableOpacity
                 style={styles.botaoRespiracao}
                 onPress={() => navigation.navigate("Respiracao")}>
-                <Image source={require('../../../assets/imagens/iconerespiracao.png')}
-                    style={styles.iconerespiracao1} />
+                <Image source={require('../../../assets/imagens/iconeRespiracao2.png')}
+                    style={styles.iconeRespiracao} />
                 <Text style={styles.textobotaorespiracao}>Breathing Practice</Text>
             </TouchableOpacity>
 
@@ -47,12 +47,15 @@ export default function Menu(): JSX.Element {
                 <TouchableOpacity
                     style={styles.botaoBlog}
                     onPress={() => navigation.navigate("Blog")}>
-                    
+                    <Image source={require('../../../assets/imagens/iconeBlog.png')}
+                    style={styles.iconeBlog} />
                     <Text style={styles.textobotaoBlog}>Blog</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.botaoMusica}
                     onPress={() => navigation.navigate("Musicas")}>
+                    <Image source={require('../../../assets/imagens/iconeMusica.png')}
+                    style={styles.iconeMusica} />
                     <Text style={styles.textobotaoMusica}>Songs</Text>
                 </TouchableOpacity>
             </View>
@@ -65,6 +68,8 @@ export default function Menu(): JSX.Element {
                 <TouchableOpacity
                     style={styles.botaoCreditos}
                     onPress={() => navigation.navigate("Creditos")}>
+                    <Image source={require('../../../assets/imagens/iconeCreditos.png')}
+                    style={styles.iconeCreditos} />
                     <Text style={styles.textobotaoCreditos}>Credits</Text>
                 </TouchableOpacity>
             </View>
