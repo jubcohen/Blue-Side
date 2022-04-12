@@ -10,6 +10,7 @@ export type propsNavigationStack = {
     Creditos: undefined
     Doacoes: undefined
     Login: undefined
+    Respiracao2: undefined
 }
 
 export type propsStack = NativeStackNavigationProp<propsNavigationStack>

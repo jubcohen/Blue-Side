@@ -15,7 +15,7 @@ import Musicas from "../../pages/Musicas";
 import Creditos from "../../pages/Creditos";
 import Doacoes from "../../pages/Doacoes";
 import Login from "../../pages/Login";
-import { Button } from "react-native";
+import Respiracao2 from '../../pages/Respiracao2';
 
 const { Navigator, Screen } = createNativeStackNavigator<propsNavigationStack>()
 
@@ -38,7 +38,7 @@ export default function Stacks() {
                 component={Menu}
                 options={{
                     title: 'Menu',
-                    headerShown: true,
+                    headerShown: false,
                     headerStyle: {
                       backgroundColor: '#fff',
                     },
@@ -124,7 +124,21 @@ export default function Stacks() {
                     headerTintColor: '#a81818',
                     headerTitleStyle: { fontFamily:'courier-prime'},
                   }}  />
-                  
+            
+            <Screen 
+                name="Respiracao2" 
+                component={Respiracao2} 
+                options={{
+                    title: 'Breathing Practice',
+                    headerShown: false,
+                    headerStyle: {
+                      backgroundColor: '#fff',
+                    },
+                    headerTintColor: '#a81818',
+                    headerTitleStyle: { fontFamily:'courier-prime'},
+                  }}  />
+
+
         </Navigator>
     )
 }

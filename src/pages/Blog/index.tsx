@@ -5,7 +5,7 @@ import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
-import { styles } from '../Home';
+import { styles } from '../../Styles';
 
 export default function Respiracao(): JSX.Element {
   const navigation = useNavigation<propsStack>();
@@ -18,13 +18,17 @@ export default function Respiracao(): JSX.Element {
   }
   
   return (
-    <View style={styles.container}> 
+    <View style={styles.containerBlog}> 
         <TouchableOpacity
-              style={styles.botaoback}
+              style={styles.botaoBackRespiracao}
               onPress={() => navigation.goBack()}>
           <Text style={styles.textobotao}>Back</Text>
         </TouchableOpacity>
-        <Text style={styles.titlerespiracao}>Blog</Text>
+        <Text style={styles.titleRespiracao}>Blog</Text>
+        <Text style={styles.boxBlog}>Text 1 </Text>
+        <Text style={styles.boxBlog}>Text 2 </Text>
+        <Text style={styles.boxBlog}>Text 3 </Text>
+        <Text style={styles.boxBlog}>Text 4 </Text>
     </View>
   );
 }

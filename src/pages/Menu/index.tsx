@@ -26,11 +26,6 @@ export default function Menu(): JSX.Element {
                     onPress={() => navigation.goBack()}>
                     <Text style={styles.textobotaoback}>Back</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.botaoLogin}
-                    onPress={() => navigation.navigate("Login")}>
-                    <Text style={styles.textobotaoback}>Login</Text>
-                </TouchableOpacity>
             </View>
 
             <Text style={styles.titlemenu}>Welcome to Blue Side</Text>

@@ -18,13 +18,13 @@ export default function Respiracao(): JSX.Element {
   }
   
   return (
-    <View style={styles.container}> 
+    <View style={styles.containerMusicas}> 
         <TouchableOpacity
               style={styles.botaoBack}
               onPress={() => navigation.goBack()}>
           <Text style={styles.textobotao}>Back</Text>
         </TouchableOpacity>
-        <Text style={styles.titlerespiracao}>Songs</Text>
+        <Text style={styles.titleRespiracao}>Songs</Text>
     </View>
   );
 }
