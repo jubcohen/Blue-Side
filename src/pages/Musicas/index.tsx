@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, SafeAreaView, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
 import { styles } from '../../Styles';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function Respiracao(): JSX.Element {
   const navigation = useNavigation<propsStack>();
@@ -18,13 +19,16 @@ export default function Respiracao(): JSX.Element {
   }
   
   return (
-    <View style={styles.containerMusicas}> 
+    <SafeAreaView style={styles.containerMusicas}> 
+    <View style={styles.containerMusicasMain}> 
         <TouchableOpacity
               style={styles.botaoBack}
               onPress={() => navigation.goBack()}>
           <Text style={styles.textobotao}>Back</Text>
         </TouchableOpacity>
-        <Text style={styles.titleRespiracao}>Songs</Text>
+        <Ionicons name='heart-outline' size={30} />
+        <Text> Music Player</Text>
     </View>
+    </SafeAreaView>
   );
 }

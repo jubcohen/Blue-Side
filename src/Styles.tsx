@@ -25,7 +25,14 @@ export const styles = StyleSheet.create({
   containerMusicas: {
     flex: 1,
     backgroundColor: "#f09d7fd4",
-    justifyContent: 'space-around',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  containerMusicasMain: {
+    flex: 1,
+    backgroundColor: "#f09d7fd4",
+    justifyContent: 'center',
     alignItems: 'center',
   },
 
