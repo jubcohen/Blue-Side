@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, StatusBar } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
@@ -18,13 +18,14 @@ export default function Respiracao(): JSX.Element {
   }
   
   return (
-    <View style={styles.container}> 
+    <View style={styles.container}>
+      <StatusBar hidden /> 
         <TouchableOpacity
               style={styles.botaoBack}
               onPress={() => navigation.goBack()}>
           <Text style={styles.textobotao}>Back</Text>
         </TouchableOpacity>
-        <Text style={styles.titlerespiracao}>Credits</Text>
+        <Text style={styles.titleRespiracao}>Credits</Text>
     </View>
   );
 }

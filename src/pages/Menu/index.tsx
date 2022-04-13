@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image, View, TouchableOpacity } from 'react-native';
+import { Text, Image, View, TouchableOpacity, StatusBar } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
@@ -20,6 +20,7 @@ export default function Menu(): JSX.Element {
     
     return (
         <View style={styles.container}>
+            <StatusBar hidden />
             <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}> 
                 <TouchableOpacity
                     style={styles.botaoBack}

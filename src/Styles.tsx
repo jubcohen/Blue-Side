@@ -25,8 +25,7 @@ export const styles = StyleSheet.create({
   containerMusicas: {
     flex: 1,
     backgroundColor: "#f09d7fd4",
-    justifyContent: 'center',
-    alignItems: 'center',
+    
   },
 
   containerMusicasMain: {
@@ -416,4 +415,16 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
 
+  bottomContainer:{
+    borderTopColor: '#393E46',
+    borderTopWidth: 1,
+    width: 414,
+    alignItems: 'center',
+    paddingVertical: 15,
+  },
+  bottomControl: {
+    flexDirection: 'row', 
+    justifyContent:'space-between', 
+    width: '80%'
+  }
 });
