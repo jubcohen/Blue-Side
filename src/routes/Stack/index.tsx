@@ -27,7 +27,6 @@ export default function Stacks() {
         return <AppLoading />;
     }
 
-
     return(
         <Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
             <Screen 

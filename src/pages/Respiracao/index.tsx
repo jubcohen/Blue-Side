@@ -19,7 +19,7 @@ export default function Respiracao(): JSX.Element {
   }
   
   return (
-    <View style={styles.container}> 
+    <View style={styles.containerRespiracao}> 
         <TouchableOpacity
               style={styles.botaoBackRespiracao}
               onPress={() => navigation.goBack()}>

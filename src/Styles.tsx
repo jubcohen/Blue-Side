@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
 
   containerRespiracao: {
     flex: 1,
-    backgroundColor: "#FAF5F1",
+    backgroundColor: "#E5E5e5",
     justifyContent: 'space-around',
     alignItems: 'center',
   },

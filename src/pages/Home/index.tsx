@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
               onPress={() => navigation.navigate("Menu")}>
               <Text style={styles.textobotao}>Click here to start</Text>
           </TouchableOpacity>
-          <StatusBar style="auto" />
+          <StatusBar style="dark" />
           <Text style={styles.espaco}></Text>
           <Text style={styles.subtitle}>by Golden Writers</Text>
       </View>
