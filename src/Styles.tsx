@@ -233,6 +233,7 @@ export const styles = StyleSheet.create({
     borderWidth:0.5,
     borderRadius: 10, 
     borderColor:'#438788ca',
+
   },
 
   botaoRespiracao2: { 
@@ -267,6 +268,8 @@ export const styles = StyleSheet.create({
     padding: 30, 
     flexDirection: "row",
     justifyContent: "space-around",
+
+  
   },
 
   botaoMusica: { 
@@ -422,9 +425,71 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 15,
   },
+
   bottomControl: {
     flexDirection: 'row', 
     justifyContent:'space-between', 
     width: '80%'
+  },
+
+  artworkWeightless: {
+    width: 300,
+    height: 340,
+    marginBottom: 25,
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 5,
+      height: 5,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+
+  artworkImg: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 15,
+  },
+
+  songTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+    color: '#EEEEEE'
+  },
+
+  artistTitle: {
+    fontSize: 16,
+    fontWeight: '200',
+    textAlign: 'center',
+    color: '#EEEEEE'
+  },
+
+  progressContainer: {
+    width: 350,
+    height: 40,
+    marginTop: 25,
+    flexDirection: 'row',
+  },
+
+  progessLabelContainer: {
+    width: 340,
+    flexDirection: 'row',
+    justifyContent: 'space-between', 
+  },
+
+  progressLabelTxt: {
+    color: '#fff',
+  },
+
+  musicControlls: {
+    flexDirection: 'row',
+    width: '60%',
+    justifyContent: 'space-between',
+    marginTop: 15,
   }
+
 });
