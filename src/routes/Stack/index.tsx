@@ -11,7 +11,7 @@ import Home from "../../pages/Home";
 import Respiracao from "../../pages/Respiracao";
 import Menu from "../../pages/Menu";
 import Blog from "../../pages/Blog";
-import Musicas from "../../pages/Musicas";
+import Musicas from "../../pages/Musicas/MusicPlayer";
 import Creditos from "../../pages/Creditos";
 import Doacoes from "../../pages/Doacoes";
 import Login from "../../pages/Login";
