@@ -28,17 +28,7 @@ import { styles } from '../../Styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import songs from '../../../assets/infoSongs';
 
-const togglePlayBack =async (playbackState: State) => {
-  const currentTrack = await TrackPlayer.getCurrentTrack();
 
-  if ( currentTrack != null ) {
-    if( playbackState == State.Paused ) {
-      await TrackPlayer.play();
-    } else {
-      await TrackPlayer.pause();
-    }
-  }
-}
 
 export default function MusicPlayer(): JSX.Element {
 
@@ -46,10 +36,22 @@ export default function MusicPlayer(): JSX.Element {
 
     const { width, height } = Dimensions.get('window');
 
-    const setupPlayer =async () => {
+    const setupPlayer = async () => {
       await TrackPlayer.setupPlayer();
 
       await TrackPlayer.add(songs);
+    }
+
+    const togglePlayBack = async(playbackState: State) => {
+      const currentTrack = await TrackPlayer.getCurrentTrack();
+    
+      if ( currentTrack != null ) {
+        if( playbackState == State.Paused ) {
+          await TrackPlayer.play();
+        } else {
+          await TrackPlayer.pause();
+        }
+      }
     }
 
     const playbackState = usePlaybackState();
@@ -63,6 +65,7 @@ export default function MusicPlayer(): JSX.Element {
       scrollX.addListener(({ value }) => {
         // console.log('Scroll X', scrollX);
         // console.log('Device Width ', width);
+        
         const index = Math.round( value / width);
         setSongIndex(index);
 
@@ -165,7 +168,7 @@ export default function MusicPlayer(): JSX.Element {
               <Ionicons name='play-skip-back-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => togglePlayBack(playbackState) }>
-              <Ionicons name={playbackState == State.Playing ? 'ios-pause' : 'ios-pause-circle'} size={75} color='#FFD369' />
+              <Ionicons name={playbackState == State.Playing ? 'ios-pause-circle' : 'ios-pause-circle'} size={75} color='#FFD369' />
             </TouchableOpacity>
             <TouchableOpacity onPress={skipToNext}>
               <Ionicons name='play-skip-forward-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
