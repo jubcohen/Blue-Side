@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
 import { styles } from '../../Styles';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function Respiracao(): JSX.Element {
   const navigation = useNavigation<propsStack>();
@@ -20,10 +21,8 @@ export default function Respiracao(): JSX.Element {
   
   return (
     <View style={styles.containerRespiracao}> 
-        <TouchableOpacity
-              style={styles.botaoBackRespiracao}
-              onPress={() => navigation.goBack()}>
-          <Text style={styles.textobotao}>Back</Text>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+              <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -190, }} />
         </TouchableOpacity>
         <Text style={styles.titleRespiracao}>Breathing Practice</Text>
         <Text style={styles.textoRespiracao1}>Click below to start{"\n"} your breathing practice</Text>

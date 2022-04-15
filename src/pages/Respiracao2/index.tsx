@@ -8,6 +8,7 @@ import { propsStack } from "../../routes/Stack/Models";
 import {Video} from 'expo-av';
 
 import { styles } from '../../Styles';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 export default function Respiracao2(): JSX.Element {
@@ -26,11 +27,9 @@ export default function Respiracao2(): JSX.Element {
   
   return (
     <View style={styles.containerRespiracao}> 
-        <TouchableOpacity
-              style={styles.botaoBackRespiracao2}
-              onPress={() => navigation.goBack()}>
-          <Text style={styles.textobotao}>Back</Text>
-        </TouchableOpacity> 
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+              <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -190, }} />
+        </TouchableOpacity>
 
         <Video
         ref={video}

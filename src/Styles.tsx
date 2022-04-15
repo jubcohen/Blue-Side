@@ -35,6 +35,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
+  containerCreditos: {
+    flex: 1,
+    backgroundColor: "#cc4bcc3b",
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   title: {
     color: '#ffffff',
     fontFamily: 'courier-prime',

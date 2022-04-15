@@ -14,10 +14,31 @@ import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
+import TrackPlayer, {
+  Capability,
+  Event, 
+  RepeatMode,
+  State,
+  usePlaybackState,
+  useProgress,
+  useTrackPlayerEvents,
+} from 'react-native-track-player';
 import Slider from '@react-native-community/slider';
 import { styles } from '../../Styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import songs from '../../../assets/songs';
+import songs from '../../../assets/infoSongs';
+
+const togglePlayBack =async (playbackState: State) => {
+  const currentTrack = await TrackPlayer.getCurrentTrack();
+
+  if ( currentTrack != null ) {
+    if( playbackState == State.Paused ) {
+      await TrackPlayer.play();
+    } else {
+      await TrackPlayer.pause();
+    }
+  }
+}
 
 export default function MusicPlayer(): JSX.Element {
 
@@ -25,12 +46,20 @@ export default function MusicPlayer(): JSX.Element {
 
     const { width, height } = Dimensions.get('window');
 
+    const setupPlayer =async () => {
+      await TrackPlayer.setupPlayer();
+
+      await TrackPlayer.add(songs);
+    }
+
+    const playbackState = usePlaybackState();
     const scrollX = useRef(new Animated.Value(0)).current;
     const [songIndex, setSongIndex] = useState(0);
     
     const songSlider = useRef(null);
 
     useEffect(() => {
+      setupPlayer();
       scrollX.addListener(({ value }) => {
         // console.log('Scroll X', scrollX);
         // console.log('Device Width ', width);
@@ -74,7 +103,7 @@ export default function MusicPlayer(): JSX.Element {
         }}>
           <View style={styles.artworkWeightless}>
             <Image
-              source={item.image}
+              source={item.artwork}
               style={styles.artworkImg} />
           </View>
         </Animated.View>
@@ -85,11 +114,9 @@ export default function MusicPlayer(): JSX.Element {
       <SafeAreaView style={styles.containerMusicas}>
 
         <View style={styles.containerMusicasMain}>
-          <TouchableOpacity
-            style={styles.botaoBack}
-            onPress={() => navigation.goBack()}>
-            <Text style={styles.textobotao}>Back</Text>
-          </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+              <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -190, }} />
+        </TouchableOpacity>
           <View style={{width : width}}> 
             <Animated.FlatList
               ref={songSlider}
@@ -101,12 +128,11 @@ export default function MusicPlayer(): JSX.Element {
               showsHorizontalScrollIndicator={false}
               scrollEventThrottle={16}
               onScroll={Animated.event(
-                [{
-                  nativeEvent: {
+                [{nativeEvent: {
                     contentOffset: { x: scrollX }
                   }
                 }],
-                { useNativeDriver: true }
+                {useNativeDriver: true}
               )} />
           </View>
           <View>
@@ -121,7 +147,7 @@ export default function MusicPlayer(): JSX.Element {
               minimumValue={0}
               maximumValue={100}
               thumbTintColor='#FFD369'
-              maximumTrackTintColor='#FFF'
+              maximumTrackTintColor='#e4e4e4'
               onSlidingComplete={() => { } } />
             <View style={styles.progessLabelContainer}>
               <Text style={styles.progressLabelTxt}>0:00</Text>
@@ -131,11 +157,15 @@ export default function MusicPlayer(): JSX.Element {
           </View>
 
           <View style={styles.musicControlls}>
-            <TouchableOpacity onPress={() => {skipToPrevious} }>
+            <TouchableOpacity onPress={() => {{
+              songSlider.current.scrollToOffset({
+              offset: (songIndex - 1) * width,
+              })
+              }} }>
               <Ionicons name='play-skip-back-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => { } }>
-              <Ionicons name='ios-pause-circle' size={75} color='#FFD369' />
+            <TouchableOpacity onPress={() => togglePlayBack(playbackState) }>
+              <Ionicons name={playbackState == State.Playing ? 'ios-pause' : 'ios-pause-circle'} size={75} color='#FFD369' />
             </TouchableOpacity>
             <TouchableOpacity onPress={skipToNext}>
               <Ionicons name='play-skip-forward-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
