@@ -7,7 +7,8 @@ import { Text,
   StatusBar, 
   Dimensions, 
   Image, 
-  FlatList, 
+  FlatList,
+  AppRegistry, 
 } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
@@ -65,7 +66,7 @@ export default function MusicPlayer(): JSX.Element {
       scrollX.addListener(({ value }) => {
         // console.log('Scroll X', scrollX);
         // console.log('Device Width ', width);
-        
+
         const index = Math.round( value / width);
         setSongIndex(index);
 
