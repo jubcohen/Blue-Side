@@ -30,7 +30,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import songs from '../../../assets/infoSongs';
 
 
-
 export default function MusicPlayer(): JSX.Element {
 
     const navigation = useNavigation<propsStack>();
@@ -198,4 +197,3 @@ export default function MusicPlayer(): JSX.Element {
       </SafeAreaView>
     );
   }
-
