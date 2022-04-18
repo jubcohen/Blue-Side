@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jubcohen.blue"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets//imagens/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.jubcohen.blue"
     },
     "web": {
       "favicon": "./assets/favicon.png"
