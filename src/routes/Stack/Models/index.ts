@@ -11,6 +11,10 @@ export type propsNavigationStack = {
     Doacoes: undefined
     Login: undefined
     Respiracao2: undefined
+    BlogPage1: undefined
+    BlogPage2: undefined
+    BlogPage3: undefined
+    BlogPage4: undefined
 }
 
 export type propsStack = NativeStackNavigationProp<propsNavigationStack>

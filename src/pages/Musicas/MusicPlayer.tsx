@@ -27,7 +27,8 @@ import TrackPlayer, {
 import Slider from '@react-native-community/slider';
 import { styles } from '../../Styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import songs from '../../../assets/infoSongs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import  { songs }   from '../../../assets/infoSongs';
 
 
 export default function MusicPlayer(): JSX.Element {
@@ -55,10 +56,16 @@ export default function MusicPlayer(): JSX.Element {
     }
 
     const playbackState = usePlaybackState();
+    const progress = useProgress();
+
     const scrollX = useRef(new Animated.Value(0)).current;
     const [songIndex, setSongIndex] = useState(0);
-    
+
     const songSlider = useRef(null);
+
+    const skipTo = async(trackId: number) => {
+      await TrackPlayer.skip(trackId);
+    }
 
     useEffect(() => {
       setupPlayer();
@@ -67,6 +74,7 @@ export default function MusicPlayer(): JSX.Element {
         // console.log('Device Width ', width);
 
         const index = Math.round( value / width);
+        skipTo(index)
         setSongIndex(index);
 
         //console.log('Index: ', index);
@@ -146,15 +154,22 @@ export default function MusicPlayer(): JSX.Element {
           <View>
             <Slider
               style={styles.progressContainer}
-              value={10}
+              value={progress.position}
               minimumValue={0}
-              maximumValue={100}
+              maximumValue={progress.duration}
               thumbTintColor='#FFD369'
               maximumTrackTintColor='#e4e4e4'
-              onSlidingComplete={() => { } } />
+              onSlidingComplete={async(value) => {
+                await TrackPlayer.seekTo(value);
+               } } />
             <View style={styles.progessLabelContainer}>
-              <Text style={styles.progressLabelTxt}>0:00</Text>
-              <Text style={styles.progressLabelTxt}>3:55</Text>
+              <Text style={styles.progressLabelTxt}>
+                {new Date(progress.position * 1000).toISOString().substring(14, 5)}
+              </Text>
+              <Text style={styles.progressLabelTxt}>
+              {new Date(progress.duration - progress.position * 1000).toISOString().substring(14, 5)}
+
+              </Text>
 
             </View>
           </View>

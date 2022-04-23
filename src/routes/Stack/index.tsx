@@ -16,6 +16,10 @@ import Creditos from "../../pages/Creditos";
 import Doacoes from "../../pages/Doacoes";
 import Login from "../../pages/Login";
 import Respiracao2 from '../../pages/Respiracao2';
+import BlogPage1 from '../../pages/Blog/BlogPage1';
+import BlogPage2 from '../../pages/Blog/BlogPage2';
+import BlogPage3 from '../../pages/Blog/BlogPage3';
+import BlogPage4 from '../../pages/Blog/BlogPage4';
 
 const { Navigator, Screen } = createNativeStackNavigator<propsNavigationStack>()
 
@@ -71,18 +75,7 @@ export default function Stacks() {
                     headerTitleStyle: { fontFamily:'courier-prime'},
                   }}  />
             
-            <Screen 
-                name="Musicas" 
-                component={Musicas} 
-                options={{
-                    title: 'Songs',
-                    headerShown: false,
-                    headerStyle: {
-                      backgroundColor: '#fff',
-                    },
-                    headerTintColor: '#a81818',
-                    headerTitleStyle: { fontFamily:'courier-prime'},
-                  }}  />
+            
             
             <Screen 
                 name="Creditos" 
@@ -117,11 +110,6 @@ export default function Stacks() {
                 options={{
                     title: 'Login',
                     headerShown: false,
-                    headerStyle: {
-                      backgroundColor: '#fff',
-                    },
-                    headerTintColor: '#a81818',
-                    headerTitleStyle: { fontFamily:'courier-prime'},
                   }}  />
             
             <Screen 
@@ -136,8 +124,37 @@ export default function Stacks() {
                     headerTintColor: '#a81818',
                     headerTitleStyle: { fontFamily:'courier-prime'},
                   }}  />
-
-
+            <Screen 
+                name="BlogPage1" 
+                component={BlogPage1} 
+                options={{
+                    title: 'BlogPage1',
+                    headerShown: false,}}  />
+            <Screen 
+                name="BlogPage2" 
+                component={BlogPage2} 
+                options={{
+                    title: 'BlogPage2',
+                    headerShown: false,}}  />
+            <Screen 
+                name="BlogPage3" 
+                component={BlogPage3} 
+                options={{
+                    title: 'BlogPage3',
+                    headerShown: false,}}  />
+            <Screen 
+                name="BlogPage4" 
+                component={BlogPage4} 
+                options={{
+                    title: 'BlogPage4',
+                    headerShown: false,}}  />
+            <Screen 
+                name="Musicas" 
+                component={Musicas} 
+                options={{
+                    title: 'Musicas',
+                headerShown: false,}} /> 
+            
         </Navigator>
     )
 }
