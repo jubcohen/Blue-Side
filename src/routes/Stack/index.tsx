@@ -1,6 +1,4 @@
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
-import { propsStack } from "../../routes/Stack/Models";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { propsNavigationStack } from "./Models";
 import AppLoading from 'expo-app-loading';

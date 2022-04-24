@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
 
   return (
       <View style={styles.container}>
-          <StatusBar style="dark" />
+          <StatusBar hidden />
           <Image
               style={{ width: 200, height: 200 }}
               resizeMode="contain"

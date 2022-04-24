@@ -22,10 +22,13 @@ export default function Menu(): JSX.Element {
     return (
         <View style={styles.container}>
             <StatusBar hidden />
-            <View>
+            <View style={{ margin: 1, width: '5%', flexDirection: 'row', justifyContent: 'space-between' }}> 
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -190, marginTop: -20 }} />
+                    <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -180, marginTop: -20 }} />
                 </TouchableOpacity> 
+                <Image
+                style={{ width: 70, height: 70, marginRight: -180, marginTop: -25 }}
+                source={require('../../../assets/imagens/logo.png')} />
             </View> 
 
             <Text style={styles.titlemenu}>Welcome to Blue Side</Text>

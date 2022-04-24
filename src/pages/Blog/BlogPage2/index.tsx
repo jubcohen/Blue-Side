@@ -70,7 +70,6 @@ export default function BlogPage2(): JSX.Element {
           marginRight: 10,
           marginLeft: 10,
         }}>The Anxiety and Worry Workbook: The Cognitive Behavioral Solution</Text>
-      <Image source={require('../../../../assets/imagens/imprint-of-hand-on-fabric.png')} style={{marginLeft: 50}}/>
       <Text style= {styles.textBlogPage1}> Part of the <B> definition of anxiety</B> is that it is complex. When you feel very anxious, <B> you are
 affected physically, emotionally, behaviorally and, of course, cognitively</B>. You may not be aware of it when you are anxious, but in the anxious state your way of thinking, feeling, and
 behaving is different than when you are not anxious. Here are some of the common effects of

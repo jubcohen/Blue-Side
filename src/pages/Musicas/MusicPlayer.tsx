@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useRef, useState} from 'react';
 import { Text, 
   Animated, 
@@ -183,31 +185,13 @@ export default function MusicPlayer(): JSX.Element {
               <Ionicons name='play-skip-back-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => togglePlayBack(playbackState) }>
-              <Ionicons name={playbackState == State.Playing ? 'ios-pause-circle' : 'ios-pause-circle'} size={75} color='#FFD369' />
+              <Ionicons name={playbackState == State.Playing ? 'ios-pause-circle' : 'ios-play-circle'} size={75} color='#FFD369' />
             </TouchableOpacity>
             <TouchableOpacity onPress={skipToNext}>
               <Ionicons name='play-skip-forward-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
             </TouchableOpacity>
           </View>
 
-        </View>
-
-        <View style={styles.bottomContainer}>
-          <View style={styles.bottomControl}>
-            <TouchableOpacity onPress={() => { } }>
-              <Ionicons name='heart-outline' size={30} color='#000000' />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { } }>
-              <Ionicons name='repeat' size={30} color='#000000' />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { } }>
-              <Ionicons name='share-outline' size={30} color='#000000' />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { } }>
-              <Ionicons name='ellipsis-horizontal' size={30} color='#000000' />
-            </TouchableOpacity>
-
-          </View>
         </View>
       </SafeAreaView>
     );

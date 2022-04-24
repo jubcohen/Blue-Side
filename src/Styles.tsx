@@ -15,21 +15,49 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  containerBlog: {
+  containerRespiracao2: {
     flex: 1,
-    backgroundColor: "#fcb1479f",
+    backgroundColor: "#ffffff",
     justifyContent: 'space-around',
     alignItems: 'center',
+  },
+
+  containerBlog: {
+    flex: 1,
+    backgroundColor: "#E5E5E5",
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+
+  containerScroll: {
+    flex: 4,
+    backgroundColor: "#E5E5E5",
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+
+  containerBlogPage1: {
+    flex: 1,
+    backgroundColor: "#e6d9c9",
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+
+  containerScrollBlogPage1: {
+    flex: 3,
+    backgroundColor: "#e6d9c9",
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    textAlign: 'justify',
   },
 
   containerMusicas: {
     flex: 1,
     backgroundColor: "#f09d7fd4",
-    
   },
 
   containerMusicasMain: {
-    flex: 1,
+    flex: -2,
     backgroundColor: "#f09d7fd4",
     justifyContent: 'center',
     alignItems: 'center',
@@ -391,27 +419,157 @@ export const styles = StyleSheet.create({
   video: {
     alignSelf: 'stretch',
     width: 345,
-    height: 150,    
+    height: 250,    
     alignItems: 'center',
     alignContent: 'center'
   },
 
-  boxBlog: {
-    color: '#135858',
+  boxBlog1: {
     flex: -1,
     padding: 10,
-    margin: -20,
-    width: 360,
-    height: 100,
-    fontFamily: 'courier-prime.ttf',
-    alignContent: "center",
-    resizeMode: 'contain',
-    textAlign: 'center',
-    fontSize: 20,
+    marginTop: 5,
+    width: 390,
+    height: 110,
+    backgroundColor: "#FFDDD1",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#FFDDD1',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+  },
+
+  box1: {
+    flex: -1,
+    position: 'absolute',
+    padding: 10,
+    marginTop: 7,
+    marginLeft: 10,
+    width: 370,
+    height: 90,
     backgroundColor: "#fffcfc96",  
     borderWidth: 0.5,
     borderRadius: 20, 
     borderColor:'#fffcfc96',
+  },
+
+  textBlog1: {
+    color: '#135858',
+    padding: 20,
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    textAlign: 'justify',
+    fontSize: 20,
+  },
+
+  boxBlog2: {
+    flex: -1,
+    padding: 10,
+    marginTop: 15,
+    width: 390,
+    height: 130,
+    backgroundColor: "#FFDDD1",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#FFDDD1',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+  },
+
+  box2: {
+    flex: -1,
+    position: 'absolute',
+    padding: 10,
+    marginTop: 7,
+    marginLeft: 10,
+    width: 370,
+    height: 110,
+    backgroundColor: "#fffcfc96",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#fffcfc96',
+  },
+
+  textBlog2: {
+    color: '#135858',
+    padding: 20,
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    textAlign: 'justify',
+    fontSize: 20,
+  },
+
+  boxBlog3: {
+    flex: -1,
+    padding: 10,
+    marginTop: 15,
+    width: 390,
+    height: 110,
+    backgroundColor: "#FFDDD1",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#FFDDD1',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+  },
+
+  box3: {
+    flex: -1,
+    position: 'absolute',
+    padding: 10,
+    marginTop: 7,
+    marginLeft: 10,
+    width: 370,
+    height: 90,
+    backgroundColor: "#fffcfc96",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#fffcfc96',
+  },
+
+  textBlog3: {
+    color: '#135858',
+    padding: 20,
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    textAlign: 'justify',
+    fontSize: 20,
+  },
+
+  boxBlog4: {
+    flex: -1,
+    padding: 10,
+    marginTop: 15,
+    width: 390,
+    height: 80,
+    backgroundColor: "#FFDDD1",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#FFDDD1',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+  },
+
+  box4: {
+    flex: -1,
+    position: 'absolute',
+    padding: 10,
+    marginTop: 7,
+    marginLeft: 10,
+    width: 370,
+    height: 60,
+    backgroundColor: "#fffcfc96",  
+    borderWidth: 0.5,
+    borderRadius: 20, 
+    borderColor:'#fffcfc96',
+  },
+
+  textBlog4: {
+    color: '#135858',
+    padding: 20,
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    textAlign: 'justify',
+    fontSize: 20,
   },
 
   botaoBackBlog: { 
@@ -462,17 +620,19 @@ export const styles = StyleSheet.create({
   },
 
   songTitle: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: '600',
     textAlign: 'center',
-    color: '#EEEEEE'
+    color: '#EEEEEE',
+    fontFamily: 'Montserrat-Light',
   },
 
   artistTitle: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '200',
     textAlign: 'center',
-    color: '#EEEEEE'
+    color: '#EEEEEE',
+    fontFamily: 'Montserrat-Light',
   },
 
   progressContainer: {
@@ -497,6 +657,56 @@ export const styles = StyleSheet.create({
     width: '60%',
     justifyContent: 'space-between',
     marginTop: 15,
-  }
+  },
+
+  scrollView: {
+    marginTop: 80,
+    backgroundColor: '#fcb1479f',
+    marginHorizontal: 50,
+  },
+
+  titleBlogPage1: {
+    color: '#135858',
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    fontSize: 30,
+    textAlign: 'center',
+    marginLeft: 10,
+  },
+
+  textBlogPage1: {
+    color: '#1e1f1f',
+    fontFamily: 'Montserrat-Light',
+    fontSize: 19, 
+    textAlign: 'justify', 
+    margin: 10,
+  },
+
+  links: {
+    color: '#438788', 
+    fontFamily: 'Montserrat-Bold',
+    padding: 20,
+    alignContent: "center",
+    textAlign: 'justify',
+    fontSize: 15,
+    textDecorationLine: 'underline'
+  },
+
+  titleCreditos: {
+    flex: 2,
+    color: '#135858',
+    fontFamily: 'courier-prime',
+    alignContent: "center",
+    fontSize: 40,
+    textAlign: 'center',
+    
+  },
+
+  containerCreditosScroll: {
+    flex: 5,
+    backgroundColor: "#e6d9c9",
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
 
 });

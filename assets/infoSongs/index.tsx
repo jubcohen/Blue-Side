@@ -1,5 +1,3 @@
-import TrackPlayer from "react-native-track-player";
-
 export const songs = [
     {
         title: 'Weightless',
@@ -13,7 +11,7 @@ export const songs = [
     {
         title: 'Midway',
         artist: 'Tony Anderson',
-        artwork: require('../midwaycover.jpeg'),
+        artwork: require('../artwork/midwaycover.jpeg'),
         url: require('../songs/midway.mp3'),
         id: '2',
         duration: 379.8,
@@ -31,7 +29,7 @@ export const songs = [
     {
         title: 'Eternity',
         artist: 'Ola Gjeilo',
-        artwork: require('../eternity.png'),
+        artwork: require('../artwork/eternity.png'),
         url: require('../songs/eternity.mp3'),
         id: '4',
         duration: 87,
@@ -40,7 +38,7 @@ export const songs = [
     {
         title: 'Immortal Beloved',
         artist: 'James Heather',
-        artwork: require('../immortalbeloved.png'),
+        artwork: require('../artwork/immortalbeloved.jpeg'),
         url: require('../songs/immortalbeloved.mp3'),
         id: '5',
         duration: 213,
@@ -49,7 +47,7 @@ export const songs = [
     {
         title: 'Relaxing Piano Music',
         artist: 'Kevin MacLeod',
-        artwork: require('../kevin1.png'),
+        artwork: require('../artwork/kevin1.png'),
         url: require('../songs/kevin1.mp3'),
         id: '6',
         duration: 1468.8,
@@ -58,7 +56,7 @@ export const songs = [
     {
         title: 'Music of relaxation',
         artist: 'Kevin MacLeod',
-        artwork: require('../small-waterfalls.jpg'),
+        artwork: require('../artwork/small-waterfalls.jpg'),
         url: require('../songs/kevin2.mp3'),
         id: '7',
         duration: 3600,

@@ -46,7 +46,6 @@ export default function BlogPage3(): JSX.Element {
           margin: 10,
         }}>Writen by: Psychologist - Priscila da Silva Macacari</Text>
         
-      <Image source={require('../../../../assets/imagens/imprint-of-hand-on-fabric.png')} style={{marginLeft: 50}}/>
       <Text style= {styles.textBlogPage1}> Use this technique whenever you can't control your emotions. Negative feelings tend to
 disappear after you are aware of your reactions.</Text>
       <Text style= {styles.textBlogPage1}><B>Accept your anxiety </B>– The most important thing in dealing with anxiety is to fully accept it. Accept what
