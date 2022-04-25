@@ -21,7 +21,7 @@ export const songs = [
         title: '15 minutes to relax',
         artist: ' ',
         artwork: require('../artwork/pier-at-a-lake.jpg'),
-        url: require('../songs/midway.mp3'),
+        url: require('../songs/MúsicaRelaxanteAcalmarMenteRelaxar.mp3'),
         id: '3',
         duration: 906.6,
     },
@@ -60,6 +60,42 @@ export const songs = [
         url: require('../songs/kevin2.mp3'),
         id: '7',
         duration: 3600,
+    },
+
+    {
+        title: 'Control Anxiety and Stress',
+        artist: 'Royalty free music by Bensound',
+        artwork: require('../artwork/shot-of-a-waterfall.jpg'),
+        url: require('../songs/ControlAnxietyStress.mp3'),
+        id: '8',
+        duration: 900.6,
+    },
+
+    {
+        title: 'Sounds of Water and Nature',
+        artist: 'Leovell',
+        artwork: require('../artwork/valbona-valley.jpg'),
+        url: require('../songs/naturesounds.mp3'),
+        id: '9',
+        duration: 900.6,
+    },
+
+    {
+        title: 'Deep Relaxation and Inspiration',
+        artist: ' ',
+        artwork: require('../artwork/pier-at-a-lake.jpg'),
+        url: require('../songs/15minutestorelax.mp3'),
+        id: '10',
+        duration: 900.6,
+    },
+
+    {
+        title: 'Healing meditation song',
+        artist: ' ',
+        artwork: require('../artwork/scenery-of-a-river.jpg'),
+        url: require('../songs/healing.mp3'),
+        id: '11',
+        duration: 900.6, 
     },
 
 ];
