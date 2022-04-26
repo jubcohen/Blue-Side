@@ -36,6 +36,6 @@ expo start
 ```
 A QR code will apear on the screen. Scan it. It will take you to the Expo go app to access Blue Side.
 
-### Contact
+#### Contact
 
-Julia Cohen – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Julia Cohen  – juliabcohen@icloud.com
