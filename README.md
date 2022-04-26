@@ -1,5 +1,4 @@
 # How to run Blue Side
-![](/assets/imagens/logo.png)
 
 ## Installation
 There are two tools that you need to develop apps with Expo: 
@@ -11,9 +10,9 @@ Expo CLI is a command line app that is the main interface between a developer an
 Expo CLI also has a web-based GUI that pops up in your web browser when you start your project — you can use the GUI instead of the command line interface if you're not yet comfortable using a terminal or prefer GUIs, both have similar capabilities.
 
 #### Requirements
-- Node.js LTS release
-- Git
-- Watchman for macOS or Linux users
+- <a href= 'https://nodejs.org/en/download/'>Node.js LTS release</a>
+- <a href= 'https://git-scm.com/downloads'>Git</a>
+- <a href= 'https://facebook.github.io/watchman/docs/install.html'>Watchman for macOS or Linux users</a>
 
 #### Installing Expo CLI 
 ```sh
