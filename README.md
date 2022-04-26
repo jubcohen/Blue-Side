@@ -1,6 +1,5 @@
 # How to run Bue Side
-<img src=>
-> 
+<img src='/Users/juliacohen/blue/assets/imagens/logo.png'>
 
 ## Installation
 There are two tools that you need to develop apps with Expo: 
@@ -37,6 +36,6 @@ expo start
 ```
 A QR code will apear on the screen. Scan it. It will take you to the Expo go app to access Blue Side.
 
-## Meta
+### Contact
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Julia Cohen – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
