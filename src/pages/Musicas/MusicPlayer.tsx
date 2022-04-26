@@ -6,77 +6,73 @@ import { Text,
   SafeAreaView, 
   View, 
   TouchableOpacity, 
-  StatusBar, 
   Dimensions, 
   Image, 
-  FlatList,
-  AppRegistry, 
 } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { useNavigation } from "@react-navigation/native";
 import { propsStack } from "../../routes/Stack/Models";
 
-import TrackPlayer, {
-  Capability,
-  Event, 
-  RepeatMode,
-  State,
-  usePlaybackState,
-  useProgress,
-  useTrackPlayerEvents,
-} from 'react-native-track-player';
+// import TrackPlayer, {
+//   Capability,
+//   Event, 
+//   RepeatMode,
+//   State,
+//   usePlaybackState,
+//   useProgress,
+//   useTrackPlayerEvents,
+// } from 'react-native-track-player';
 import Slider from '@react-native-community/slider';
 import { styles } from '../../Styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import  { songs }   from '../../../assets/infoSongs';
 
 
-export default function MusicPlayer(): JSX.Element {
+export default function MusicPlayer(this: any): JSX.Element {
 
     const navigation = useNavigation<propsStack>();
 
     const { width, height } = Dimensions.get('window');
 
-    const setupPlayer = async () => {
-      await TrackPlayer.setupPlayer();
+    // const setupPlayer = async () => {
+    //   await TrackPlayer.setupPlayer();
 
-      await TrackPlayer.add(songs);
-    }
+    //   await TrackPlayer.add(songs);
+    // }
 
-    const togglePlayBack = async(playbackState: State) => {
-      const currentTrack = await TrackPlayer.getCurrentTrack();
+    // const togglePlayBack = async(playbackState: State) => {
+    //   const currentTrack = await TrackPlayer.getCurrentTrack();
     
-      if ( currentTrack != null ) {
-        if( playbackState == State.Paused ) {
-          await TrackPlayer.play();
-        } else {
-          await TrackPlayer.pause();
-        }
-      }
-    }
+    //   if ( currentTrack != null ) {
+    //     if( playbackState == State.Paused ) {
+    //       await TrackPlayer.play();
+    //     } else {
+    //       await TrackPlayer.pause();
+    //     }
+    //   }
+    // }
 
-    const playbackState = usePlaybackState();
-    const progress = useProgress();
+    // const playbackState = usePlaybackState();
+    // const progress = useProgress();
 
     const scrollX = useRef(new Animated.Value(0)).current;
     const [songIndex, setSongIndex] = useState(0);
 
     const songSlider = useRef(null);
 
-    const skipTo = async(trackId: number) => {
-      await TrackPlayer.skip(trackId);
-    }
+    // const skipTo = async(trackId: number) => {
+    //   await TrackPlayer.skip(trackId);
+    // }
 
     useEffect(() => {
-      setupPlayer();
+      // setupPlayer();
       scrollX.addListener(({ value }) => {
         // console.log('Scroll X', scrollX);
         // console.log('Device Width ', width);
 
         const index = Math.round( value / width);
-        skipTo(index)
+        // skipTo(index)
         setSongIndex(index);
 
         //console.log('Index: ', index);
@@ -101,7 +97,11 @@ export default function MusicPlayer(): JSX.Element {
 
     const [fontsLoaded] = useFonts({
       'courier-prime': require('../../../assets/fonts/courier-prime.ttf'),
-    });
+      'courier-prime-bold': require('../../../assets/fonts/courier-prime-bold.ttf'),
+      'Montserrat-Light': require('../../../assets/fonts/Montserrat-Light.ttf'),
+      'Montserrat-Bold': require('../../../assets/fonts/Montserrat-Bold.ttf'),
+      'Montserrat-Extrabold': require('../../../assets/fonts/Montserrat-Extrabold.ttf'),
+      });
     if (!fontsLoaded) {
       return <AppLoading />;
     }
@@ -128,7 +128,7 @@ export default function MusicPlayer(): JSX.Element {
 
         <View style={styles.containerMusicasMain}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-              <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -190, }} />
+              <Ionicons name='arrow-back-outline' size={45} color='#438788ca' style={{ marginLeft: -190, marginTop: 18}} />
         </TouchableOpacity>
           <View style={{width : width}}> 
             <Animated.FlatList
@@ -156,21 +156,24 @@ export default function MusicPlayer(): JSX.Element {
           <View>
             <Slider
               style={styles.progressContainer}
-              value={progress.position}
+              // value={progress.position}
+              value={0}
               minimumValue={0}
-              maximumValue={progress.duration}
+              // maximumValue={progress.duration}
+              maximumValue={1}
               thumbTintColor='#FFD369'
               maximumTrackTintColor='#e4e4e4'
               onSlidingComplete={async(value) => {
                 await TrackPlayer.seekTo(value);
-               } } />
+               } } 
+               />
             <View style={styles.progessLabelContainer}>
               <Text style={styles.progressLabelTxt}>
-                {new Date(progress.position * 1000).toISOString().substring(14, 5)}
+                {/* {new Date(progress.position * 1000).toISOString().substring(14, 5)} */}0:00
               </Text>
               <Text style={styles.progressLabelTxt}>
-              {new Date(progress.duration - progress.position * 1000).toISOString().substring(14, 5)}
-
+              {/* {new Date(progress.duration - progress.position * 1000).toISOString().substring(14, 5)} */}
+              --
               </Text>
 
             </View>
@@ -184,8 +187,11 @@ export default function MusicPlayer(): JSX.Element {
               }} }>
               <Ionicons name='play-skip-back-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => togglePlayBack(playbackState) }>
+            {/* <TouchableOpacity onPress={() => togglePlayBack(playbackState) }>
               <Ionicons name={playbackState == State.Playing ? 'ios-pause-circle' : 'ios-play-circle'} size={75} color='#FFD369' />
+            </TouchableOpacity> */}
+            <TouchableOpacity>
+              <Ionicons name= 'ios-pause-circle' size={75} color='#FFD369' />
             </TouchableOpacity>
             <TouchableOpacity onPress={skipToNext}>
               <Ionicons name='play-skip-forward-outline' size={35} color='#FFD369' style={{ marginTop: 25 }} />
