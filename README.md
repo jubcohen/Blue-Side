@@ -34,7 +34,7 @@ Now, all you need to do to start the application is to run:
 expo start 
 ```
 
-and scanning the resulting QR code with your system camera or QR code reader; or pressing the "a" or "i" keys (to open the app in your Android or iPhone emulator or simulator respectively).
+and scanning the resulting QR code with your system camera or QR code reader; or, if you are using an emulator or simulator, pressing the "a" or "i" keys (to open the app in your Android or iPhone emulator or simulator respectively).
 
 ### Contact
 
