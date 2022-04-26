@@ -1,4 +1,4 @@
-# How to run Blue Side
+# How to run Blue Side 
 
 ## Installation
 There are two tools that you need to develop apps with Expo: 
@@ -28,13 +28,14 @@ Expo Go allows you to open up apps that are being served through Expo CLI.
 
 ## Development setup
 
-On VS Code, or any other code editor, go to Blue Side file then run the following command.
+Now, all you need to do to start the application is to run:
 
 ```sh
 expo start 
 ```
-A QR code will apear on the screen. Scan it. It will take you to the Expo go app to access Blue Side.
 
-#### Contact
+and scanning the resulting QR code with your system camera or QR code reader; or pressing the "a" or "i" keys (to open the app in your Android or iPhone emulator or simulator respectively).
+
+### Contact
 
 Julia Cohen  – juliabcohen@icloud.com
