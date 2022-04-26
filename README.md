@@ -1,5 +1,5 @@
-# How to run Bue Side
-<img src='/Users/juliacohen/blue/assets/imagens/logo.png'>
+# How to run Blue Side
+![](/assets/imagens/logo.png)
 
 ## Installation
 There are two tools that you need to develop apps with Expo: 
